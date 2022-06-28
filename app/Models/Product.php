@@ -24,11 +24,11 @@ class Product extends Model
     
     
     public function subcategories(){
-        return $this->belongsTo(Subcategory::class);
+        return $this->belongsTo(Subcategory::class, 'subcategory_id', 'id');
     }
 
-    public function color(){
-        return $this->hasMany(Color::class, 'color_product');
+    public function colors(){
+        return $this->belongsToMany(Color::class, 'color_product');
     }
 
     public function images(){

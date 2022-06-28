@@ -19,6 +19,7 @@ class CreateColorProductTable extends Migration
             $table->foreign('color_id', 'fk_colorproduct_color')->references('id')->on('colors')->onDelete('restrict')->onUpdate('restrict');
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id', 'fk_colorproduct_product')->references('id')->on('categories')->onDelete('restrict')->onUpdate('restrict');
+            $table->integer('quantity');
         });
     }
 
