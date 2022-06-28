@@ -14,7 +14,7 @@ class ImageFactory extends Factory
     public function definition()
     {
         $fakerFileName = $this->faker->image(
-            storage_path("app/public/product"),
+            storage_path("app/public/products"),
             640,
             480
             );

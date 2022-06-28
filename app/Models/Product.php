@@ -9,6 +9,9 @@ class Product extends Model
 {
     use HasFactory;
 
+    const DELETED = 1;
+    const RELEASED = 2;
+
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function size(){
@@ -29,7 +32,7 @@ class Product extends Model
     }
 
     public function images(){
-        return $this->morphMany(Image::class);
+        return $this->morphMany(Image::class, 'imageable');
     }
     
 }
