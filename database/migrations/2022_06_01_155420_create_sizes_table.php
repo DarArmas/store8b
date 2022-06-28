@@ -17,7 +17,7 @@ class CreateSizesTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id', 'fk_size_product')->references('id')->on('product')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('product_id', 'fk_size_product')->references('id')->on('products')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Image;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProductFactory extends Factory
@@ -14,7 +16,7 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+           
         ];
     }
 }

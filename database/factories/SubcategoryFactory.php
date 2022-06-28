@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ImageFactory extends Factory
+class SubcategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,13 +14,13 @@ class ImageFactory extends Factory
     public function definition()
     {
         $fakerFileName = $this->faker->image(
-            storage_path("app/public/product"),
+            storage_path("app/public/subcategories"),
             640,
             480
             );
             return [
-                'image' => 'product/'.$this->faker->imageUrl(640,480),
-                'image' => 'app/public/product'.basename($fakerFileName)
+                'image' => 'subcategories/'.$this->faker->imageUrl(640,480),
+                'image' => 'app/public/subcategories'.basename($fakerFileName)
             ];
     }
 }

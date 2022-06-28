@@ -17,10 +17,11 @@ class CreateSubcategoriesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->boolean('color');
-            $table->boolean('size');
+            $table->string('slug');
+            $table->boolean('color')->default(true);
+            $table->boolean('size')->default(false);
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id', 'fk_subcategory_category')->references('id')->on('categories')->onDelete('cascade')->onUpdate('restrict'); //lave foranea
+            $table->foreign('category_id', 'fk_subcategory_category')->references('id')->on('categories')->onDelete('cascade')->onUpdate('restrict');
             $table->timestamps();
         });
     }

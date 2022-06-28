@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Subcategory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,12 +15,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
         Storage::deleteDirectory('/public/categories');
-       Storage::makeDirectory('/public/categories');
+        Storage::deleteDirectory('/public/subcategories');
+        Storage::makeDirectory('/public/categories');
+        Storage::makeDirectory('/public/subcategories');
+        Storage::makeDirectory('/public/products');
+        Storage::makeDirectory('/public/products');
+        
         $this->call([
             UserSeeder::class,
-            CategorySeeder::class
+            CategorySeeder::class,
+            SubcategorySeeder::class,
+            ImageSeeder::class,
         ]);
     }
 }
