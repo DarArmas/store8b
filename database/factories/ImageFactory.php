@@ -19,8 +19,8 @@ class ImageFactory extends Factory
             480
             );
             return [
-                'image' => 'product/'.$this->faker->imageUrl(640,480),
-                'image' => 'app/public/product'.basename($fakerFileName)
+                'url' => 'products/'.$this->faker->imageUrl(640,480),
+                'url' => 'app/public/products'.basename($fakerFileName)
             ];
     }
 }
