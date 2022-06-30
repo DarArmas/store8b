@@ -1,6 +1,8 @@
 <div>
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     <div class="py-12">
-        <h1 class="text-orange-500">Hola mundo desde componenete</h1>
+        <div class="container">
+            <h1 class="text-orange-500">Hola mundo desde componenete</h1>
+        </div>
     </div>
 </div>

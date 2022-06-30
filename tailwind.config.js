@@ -1,4 +1,5 @@
-const { colors } = require('laravel-mix/src/Log');
+//const { colors } = require('laravel-mix/src/Log');
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -15,9 +16,14 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             colors:{
-                gray:colors.gray,
-                orange:colors.orange,
-                green:colors.green
+                transparent: 'transparent',
+                current: 'currentColor',
+                black: colors.black,
+                white: colors.white,
+                gray: colors.gray,
+                emerald: colors.emerald,
+                indigo: colors.indigo,
+                yellow: colors.yellow,
             }
         },
     },
