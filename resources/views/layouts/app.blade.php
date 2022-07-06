@@ -24,10 +24,6 @@
         <div class="min-h-screen bg-gray-100">
             {{-- @livewire('navigation-menu') --}}
             @livewire('navigation')
-            <button class="bg-red-500 hover:bg-red-700">
-                Hover me
-            </button>
-
             <!-- Page Heading -->
             {{-- @if (isset($header))
                 <header class="bg-white shadow">
